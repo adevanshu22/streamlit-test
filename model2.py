@@ -44,8 +44,8 @@ def main():
 
     X = np.zeros(2)
 
-    X[0] = st.slider("feature 1", -3.000, 3.000, value = 0, step = 0.01, format = "%f")
-    X[1] = st.slider("feature 2", -3.000, 3.000, value = 0, step = 0.01, format = "%f")
+    X[0] = st.slider("feature 1", min_value = -3.000, max_value = 3.000, value = 0.00, step = 0.01, format = "%f")
+    X[1] = st.slider("feature 2", min_value = -3.000, max_value = 3.000, value = 0.00, step = 0.01, format = "%f")
     
     if st.button('Predict Outcome'):
         # Perform prediction
