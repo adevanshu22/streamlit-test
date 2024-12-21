@@ -44,8 +44,8 @@ def main():
 
     X = np.zeros(2)
 
-    X[0] = st.slider("feature 1", -3, 3)
-    X[1] = st.slider("feature 2", -3, 3)
+    X[0] = st.slider("feature 1", -3, 3, step = 0.01)
+    X[1] = st.slider("feature 2", -3, 3, step = 0.01)
     
     if st.button('Predict Outcome'):
         # Perform prediction
@@ -54,9 +54,9 @@ def main():
         prediction = model.predict(X.reshape(1, -1))
         
         # Show result
-        st.success(f'Estimated Probablity: ${probability[0][1]:,.2f}')
+        st.success(f'Estimated Probablity: {(probability[0][1]:) * 100,.2f}')
 
-        st.success(f'Estimated Outcome: ${prediction[0]:,.2f}')
+        st.success(f'Estimated Outcome: {prediction[0]:}')
 
 if __name__ == '__main__':
     main()
