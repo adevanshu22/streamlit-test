@@ -54,7 +54,7 @@ def main():
         prediction = model.predict(X.reshape(1, -1))
         
         # Show result
-        st.success(f'Estimated Probablity: {(probability[0][1]:) * 100,.2f}')
+        st.success(f'Estimated Probablity: {round(probability[0][1] * 100, 2)}%')
 
         st.success(f'Estimated Outcome: {prediction[0]:}')
 
