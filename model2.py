@@ -3,8 +3,9 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.datasets import make_hastie_10_2
 # from sklearn.metrics import mean_squared_error, r2_score
-import plotly.express as px
+# import plotly.express as px
 
 # Synthetic generation of data examples for training the model
 # def generate_house_data(n_samples=100):
